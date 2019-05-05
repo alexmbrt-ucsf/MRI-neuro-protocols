@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session xsi:schemaLocation="http://wf.di.med.ge.com/session ../schemas/session.xsd" name="!*CRANIAL NERVES ALL+PSB*!" xmlns="http://wf.di.med.ge.com/2006/session" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:display="http://wf.di.med.ge.com/2007/display">
+  <viewspace name="SessionViewspace" type="com.ge.med.di.wf.core.ui.WfTabbedViewspace">
+    <property name="views" value="device-absolute:[NAV:0,88,376,640][main_vp:376,88,1024,1024][bottom_left_vp:0,728,376,384][scanops_vp:1408,88,512,40][top_right_vp:1408,127,512,472][TABbottom_right_vp:1408,608,512,504]"/>
+  </viewspace>
+  <viewspace name="DisplayViewspace" type="com.ge.med.di.wf.display.core.XPVviewspace">
+    <property name="init" value="[main_vp:0,0,6666,10000][top_right_vp:6667,410,3334,4590][TABbottom_right_vp:6667,5000,3334,5000][scanops_vp:6667,0,3334,410]"/>
+    <property name="compare.2" value="[vp1:0,0,6666,5000][vp2:0,5001,6666,5000][top_right_vp:6667,0,3334,5000][TABbottom_right_vp:6667,5001,3334,5000]"/>
+    <property name="compare.4" value="[vp1:0,0,3333,5000][vp2:3334,0,3333,5000][vp3:0,5001,3333,5000][vp4:3334,5001,3333,5000][top_right_vp:6667,0,3334,5000][TABbottom_right_vp:6667,5001,3334,5000]"/>
+    <property name="link.2" value="[vp1:vp2]"/>
+    <property name="link.4" value="[vp1:vp2:vp3:vp4]"/>
+    <property name="small_screen_views" value="top_right_vp,TABbottom_right_vp,scanops_vp"/>
+  </viewspace>
+  <!--Global Series Displayer View-->
+  <view name="DefaultSDViewer" constraints="main_vp" type="com.ge.med.di.wf.display.SeriesDisplayerView">
+    <property name="format" value="2:2"/>
+    <!--import data is set dynamically on this while launching-->
+  </view>
+  <!--View for Lx Panel 2-->
+  <view name="Panel2View" constraints="bottom_left_vp" type="gemriwfm.components.pef.MRPefAppView">
+    <property name="pefapp" value="LxPanel2"/>
+  </view>
+  <!--View for Mx Panel 2-->
+  <view name="Panel2View" constraints="bottom_left_vp" type="gemriwfm.components.pef.MRPefAppView">
+    <property name="pefapp" value="MxPanel2"/>
+  </view>
+  <!--ScanOps view for Lx Tasks-->
+  <view name="ScanOps" constraints="scanops_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+    <property name="pefapp" value="LxScanOps"/>
+  </view>
+  <!--ScanOps view for Mx Tasks-->
+  <view name="ScanOps" constraints="scanops_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+    <property name="pefapp" value="MxScanOps"/>
+  </view>
+  <!--view for Autoview-->
+  <view name="autoview" constraints="top_right_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+    <property name="pefapp" value="autoview"/>
+  </view>
+  <!--Coil UI View-->
+  <view name="Coil" constraints="TABbottom_right_vp" type="gemriwfm.components.pef.MRPefAppView">
+    <property name="pefapp" value="coilUI"/>
+  </view>
+  <!--Protocol Notes View-->
+  <view name="Protocol Notes" constraints="TABbottom_right_vp" type="gemriwfm.components.pef.MRPefAppView">
+    <property name="pefapp" value="protNotes"/>
+  </view>
+  <!--Gating Waveform View-->
+  <view name="Waveforms" constraints="TABbottom_right_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+    <property name="pefapp" value="waveforms"/>
+  </view>
+  <!--FilmComposer View For session-->
+  <view name="filmerView" constraints="filmer" type="com.ge.med.di.wf.display.FilmComposerXView"/>
+  <data name="MetaData" type="com.ge.med.di.wf.protocol.storage.MetaDataHandler" id="data.27334345.1244493020363">
+    <property name="fmri" value="off"/>
+    <property name="protocolIcon" value="resources/pm/icons/protocol_Icon/infection_on.jpg"/>
+    <property name="contrast" value="off"/>
+    <property name="other" value="off"/>
+    <property name="anatomy" value="head"/>
+    <property name="opi" value="on"/>
+    <property name="seizures" value="off"/>
+    <property name="humanoid" value="adult"/>
+    <property name="routine" value="on"/>
+    <property name="vascular" value="off"/>
+    <property name="library" value="Site"/>
+    <property name="description" value="AMB 05/04/19"/>
+    <property name="carearea" value="skeletal"/>
+    <property name="strokestat" value="off"/>
+    <property name="spectro" value="off"/>
+  </data>
+  <data name="MRSessionData" type="gemriwfm.components.session.MRSessionDataHandler" id="data.12245160.1244493020367">
+    <property name="srrating" value="200"/>
+    <property name="gradcoil" value="8"/>
+    <property name="fieldstrength" value="30000"/>
+    <property name="MR_VERSION" value="DV26.0#2"/>
+    <property name="entry" value="Head First"/>
+    <property name="autostart" value="0"/>
+    <property name="position" value="Supine"/>
+    <property name="tabentry" value="None"/>
+  </data>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="IS_PPS_ENABLED" value="false"/>
+  <property name="PPS_STATUS" value="true"/>
+  <property name="AIM_WF_PPS_DIR" value="/export/home/sdc/nuevo"/>
+  <property name="PPS_STATUS" value="true"/>
+  <property name="AIM_WF_PPS_DIR" value="/export/home/sdc/nuevo"/>
+  <task name="LOCALIZER" type="gemriwfm.components.task.LxScanningTask">
+    <!--View for Panel 2-->
+    <view name="Panel2View" constraints="bottom_left_vp" type="gemriwfm.components.pef.MRPefAppView">
+      <property name="pefapp" value="LxPanel2"/>
+    </view>
+    <!--View for Main Prescription UI-->
+    <view name="scanrx" constraints="main_vp" type="gemriwfm.components.pef.MRPefAppView">
+      <property name="pefapp" value="LxShellUI"/>
+    </view>
+    <!--View for Scan Ops UI-->
+    <view name="ScanOps" constraints="scanops_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <property name="pefapp" value="LxScanOps"/>
+    </view>
+    <!--View for Autoview-->
+    <view name="autoview" constraints="top_right_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <property name="pefapp" value="autoview"/>
+    </view>
+    <!--Coil UI View-->
+    <view name="Coil" constraints="TABbottom_right_vp" type="gemriwfm.components.pef.MRPefAppView">
+      <property name="pefapp" value="coilUI"/>
+    </view>
+    <!--Protocol Notes View-->
+    <view name="Protocol Notes" constraints="TABbottom_right_vp" type="gemriwfm.components.pef.MRPefAppView">
+      <property name="pefapp" value="protNotes"/>
+    </view>
+    <!--View for Gating Waveform UI-->
+    <view name="Waveforms" constraints="TABbottom_right_vp" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <property name="pefapp" value="waveforms"/>
+    </view>
+    <data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.30293957.1244493020429">
+      <property name="CONTENT_PROPERTY" value="LOCALIZER_20090608133020373_2"/>
+    </data>
+    <data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.25706868.1244493020447">
+      <property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_MPHIMAGES:false;DATA_FOV:360;DATA_PLANE:3-PLANE;DATA_MGROUP:false;CORNER_POINTS:140.00/140.00/-45.00%-140.00/140.00/-45.00%-140.00/-140.00/-45.00#140.00/45.00/140.00%-140.00/45.00/140.00%-140.00/45.00/-140.00@;DATA_OTREG:false;DATA_SLTHICK:5.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:256;DATA_NUMPIXELY:192;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:5;DATA_SLPERPLANE2:5;DATA_SLPERPLANE1:5;DATA_SPACING:11.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_MECHO:false;DATA_COIL:HEAD,;DATA_CONTRAST:No;DATA_SCIC:false;DATA_APP:Spin Echo;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <property name="auto_transfer" value="true"/>
+    </data>
+    <property name="scanTime" value="16000"/>
+    <property name="STATION_NO" value="0"/>
+    <property name="STATION_TYP" value="0"/>
+  </task>
+  <task name="SAG T1" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.22452615.1472644363659">
+      <ses:property name="CONTENT_PROPERTY" value="SAGT1_20190504020835603_1"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.7143336.1556960915603">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:SAGITTAL;DATA_OTREG:false;DATA_MGROUP:false;DATA_SLTHICK:3.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:320;DATA_NUMPIXELY:224;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:FSE-XL;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="175000"/>
+    <ses:data name="MR_DATA:ORIG" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.11302099.1556960915604">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:SAGITTAL;DATA_OTREG:false;DATA_MGROUP:false;DATA_SLTHICK:3.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:320;DATA_NUMPIXELY:224;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_CONTRAST:No;DATA_MECHO:false;DATA_APP:FSE-XL;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <ses:property name="auto_transfer" value="false"/>
+    </ses:data>
+    <ses:property name="datalist" value=""/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value=""/>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.7143336.1556960915603">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.7143336.1556960915603'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="AX DWI FS" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.32961514.1472644363633">
+      <ses:property name="CONTENT_PROPERTY" value="AXDWIFS_20190504020851323_3"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.3827348.1556960931324">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:240;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:123.75/132.38/-85.00%-116.13/140.00/-85.00%-123.75/-99.88/-85.00#123.75/132.38/69.00%-116.13/140.00/69.00%-123.75/-99.88/69.00@;DATA_SLTHICK:2.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:100;DATA_NUMPIXELY:132;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:DWI;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:0.90;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="82000"/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value=""/>
+    <ses:task name="ContainerProxyPPTask" type="com.ge.med.mr.viz.proxy.ContainerProxyPPTask">
+      <ses:property name="post_processing_type" value="PP_PROXY"/>
+      <ses:property name="task_added_complete" value="false"/>
+      <ses:property name="task_desc" value="Diffusion Weighted Imaging (DWI: ADC/eADC)"/>
+      <ses:property name="auto_proc" value="true"/>
+      <ses:property name="preload" value="false"/>
+      <ses:property name="qc_accept" value="false"/>
+      <ses:property name="Proxy_Key" value="ADC_KEY"/>
+      <ses:property name="Proxy_Rxdata" value="&lt;task_desc=83.101.114.105.101.115.32.68.101.115.99.114.105.112.116.105.111.110 dwi_lthresh=50 dwi_conf=0.9 dwi_cursor_size=1 dwi_epi_correction=true dwi_adc=true dwi_eadc=true>"/>
+      <ses:viewspace name="READYViewViewspace" type="com.ge.med.di.wf.display.core.AdvAppViewspace">
+        <ses:property name="views" value="device-absolute:[tasklist:0,88,376,384][main_vp:376,127,1540,990,3][main_vp_2:376,127,1540,990,2][top_right_vp:1408,127,512,472][TABbottom_right_vp:1408,600,512,512][top_middle:889,88,512,512,1][center:376,88,1024,1024,2][scanops_vp:1408,88,512,40][Float:376,88,1540,1024]"/>
+      </ses:viewspace>
+      <ses:task name="AutoProxyPPTask" type="com.ge.med.mr.viz.proxy.AutoProxyPPTask">
+        <ses:property name="processing_on_data_available" value="false"/>
+        <ses:data name="MR_DATA:PP:ADC (10^-6 mm²/s):Apr 25 2018 17-01-02 PDT" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.20065919.1556960931322">
+          <ses:property name="IMAGE_ATTRIBUTES" value=""/>
+          <ses:property name="auto_transfer" value="true"/>
+        </ses:data>
+        <import type="gemriwfm.components.data.MRImageImport" query="ancestor::wf:task/wf:data[@name='MR_DATA']"/>
+        <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.20065919.1556960931322">
+          <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.20065919.1556960931322'],"/>
+          <property name="transient" value="true"/>
+          <property name="destinations" value="PACSMAIN"/>
+          <property name="trigger" value="series"/>
+          <property name="archive_type" value="NETWORKS"/>
+        </task>
+      </ses:task>
+    </ses:task>
+    <ses:data name="LinkSource" type="com.ge.med.di.wf.session.WfData" id="data.4615176.1556960931325">
+      <ses:property name="id" value="data.4615176.1556960931325"/>
+    </ses:data>
+    <ses:property name="datalist" value=""/>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.3827348.1556960931324">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.3827348.1556960931324'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="COR DWI FS" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.30620052.1473256153526">
+      <ses:property name="CONTENT_PROPERTY" value="CORDWIFS_20190504020844693_2"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.17733744.1556960924695">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:230;DATA_MPHIMAGES:false;DATA_PLANE:CORONAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:120.05/-66.99/80.41%-109.90/-71.98/80.41%-111.66/9.20/-134.78#116.72/86.41/138.31%-113.23/81.42/138.31%-114.99/162.60/-76.88@;DATA_SLTHICK:2.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:86;DATA_NUMPIXELY:100;DATA_PURE:true;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:DWI;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:0.86;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="154000"/>
+    <ses:task name="ContainerProxyPPTask" type="com.ge.med.mr.viz.proxy.ContainerProxyPPTask">
+      <ses:property name="post_processing_type" value="PP_PROXY"/>
+      <ses:property name="task_added_complete" value="false"/>
+      <ses:property name="task_desc" value="Diffusion Weighted Imaging (DWI: ADC/eADC)"/>
+      <ses:property name="auto_proc" value="true"/>
+      <ses:property name="preload" value="false"/>
+      <ses:property name="qc_accept" value="false"/>
+      <ses:property name="Proxy_Key" value="ADC_KEY"/>
+      <ses:property name="Proxy_Rxdata" value="&lt;task_desc=83.101.114.105.101.115.32.68.101.115.99.114.105.112.116.105.111.110 dwi_lthresh=50 dwi_conf=0.01 dwi_cursor_size=0 dwi_epi_correction=true dwi_adc=true dwi_eadc=true>"/>
+      <ses:viewspace name="READYViewViewspace" type="com.ge.med.di.wf.display.core.AdvAppViewspace">
+        <ses:property name="views" value="device-absolute:[tasklist:0,88,376,384][main_vp:376,127,1540,990,3][main_vp_2:376,127,1540,990,2][top_right_vp:1408,127,512,472][TABbottom_right_vp:1408,600,512,512][top_middle:889,88,512,512,1][center:376,88,1024,1024,2][scanops_vp:1408,88,512,40][Float:376,88,1540,1024]"/>
+      </ses:viewspace>
+      <ses:task name="AutoProxyPPTask" type="com.ge.med.mr.viz.proxy.AutoProxyPPTask">
+        <ses:property name="processing_on_data_available" value="false"/>
+        <ses:data name="MR_DATA:PP:ADC (10^-6 mm²/s):Oct 01 2018 13-42-15 PDT" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.9067003.1556960924692">
+          <ses:property name="IMAGE_ATTRIBUTES" value=""/>
+          <ses:property name="auto_transfer" value="true"/>
+        </ses:data>
+        <ses:data name="MR_DATA:PP:eADC:Oct 01 2018 13-42-16 PDT" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.10693513.1556960924692">
+          <ses:property name="IMAGE_ATTRIBUTES" value=""/>
+          <ses:property name="auto_transfer" value="true"/>
+        </ses:data>
+        <import type="gemriwfm.components.data.MRImageImport" query="ancestor::wf:task/wf:data[@name='MR_DATA']"/>
+        <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.9067003.1556960924692">
+          <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.9067003.1556960924692'],"/>
+          <property name="transient" value="true"/>
+          <property name="destinations" value="PACSMAIN"/>
+          <property name="trigger" value="series"/>
+          <property name="archive_type" value="NETWORKS"/>
+        </task>
+        <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.10693513.1556960924692">
+          <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.10693513.1556960924692'],"/>
+          <property name="transient" value="true"/>
+          <property name="destinations" value="PACSMAIN"/>
+          <property name="trigger" value="series"/>
+          <property name="archive_type" value="NETWORKS"/>
+        </task>
+      </ses:task>
+    </ses:task>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value=""/>
+    <ses:property name="datalist" value=""/>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.17733744.1556960924695">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.17733744.1556960924695'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="AX 3D FIESTA" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.5455817.1472645836689">
+      <ses:property name="CONTENT_PROPERTY" value="AX3DFIESTA_20190504020903469_4"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.4989020.1556960943469">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:87.03/121.86/-61.84%-92.82/114.68/-63.69%-85.73/-64.98/-55.05#85.91/126.24/30.05%-93.94/119.05/28.20%-86.85/-60.60/36.84@;DATA_SLTHICK:0.8;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:300;DATA_NUMPIXELY:300;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:Fiesta-C;DATA_PATPOS:Supine;DATA_MODE:3D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="datalist" value=""/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value=""/>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="252000"/>
+    <ses:task name="MPRTask" type="com.ge.med.mr.viz.task.MPRTask">
+      <ses:property name="post_processing_type" value="PP_MPR"/>
+      <ses:property name="task_added_complete" value="false"/>
+      <ses:property name="task_desc" value="MultiPlanar Reconstruction (MPR)"/>
+      <ses:property name="auto_proc" value="true"/>
+      <ses:property name="preload" value="false"/>
+      <ses:property name="qc_accept" value="false"/>
+      <ses:property name="localizer_proc" value="false"/>
+      <ses:viewspace name="VolumeViewerViewspace" type="com.ge.med.di.wf.display.core.AdvAppViewspace">
+        <ses:property name="views" value="device-absolute:[tasklist:0,88,376,384][main_vp_1:376,127,1544,990,3][main_vp_2:376,127,1544,990,2][top_right_vp:1408,127,512,472][TABbottom_right_vp:1408,600,512,512][top_middle:889,88,512,512,1][center:376,88,1024,1024,2][scanops_vp:1408,88,512,40][Float:376,127,1544,990]"/>
+      </ses:viewspace>
+      <ses:task name="MultiPlanar Reconstruction (MPR)" type="com.ge.med.mr.viz.task.MPRAutoTask">
+        <ses:property name="processing_on_data_available" value="true"/>
+        <ses:property name="scan_fov" value="false"/>
+        <ses:property name="user_set_ax_desc" value="false"/>
+        <ses:property name="user_set_sag_desc" value="true"/>
+        <ses:property name="user_set_cor_desc" value="true"/>
+        <ses:data name="batchModel_0" type="com.ge.med.di.wf.display.WfVavBatchModel" id="data.27785215.1556960943467">
+          <ses:dataelement xsi:type="dis:BatchModel" xmlns:dis="http://wf.di.med.ge.com/2007/display">
+            <dis:batchType>RectPrism</dis:batchType>
+            <dis:pixelWidth>512</dis:pixelWidth>
+            <dis:pixelHeight>512</dis:pixelHeight>
+            <dis:fov>160.0</dis:fov>
+            <dis:spacing>1.0</dis:spacing>
+            <dis:reformatPlane>OB_SAGITTAL</dis:reformatPlane>
+            <dis:reformatDirection>L_TO_R</dis:reformatDirection>
+            <dis:renderStyle>MAJOR_AXIS_AVERAGE</dis:renderStyle>
+            <dis:thickness>1.0</dis:thickness>
+            <dis:seriesDescription>SAG FIESTA 1x1</dis:seriesDescription>
+          </ses:dataelement>
+        </ses:data>
+        <ses:data name="MR_DATA:PP:MPR:SAG" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.30342455.1556960943467">
+          <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:87.03/121.86/-61.84%-92.82/114.68/-63.69%-85.73/-64.98/-55.05#85.91/126.24/30.05%-93.94/119.05/28.20%-86.85/-60.60/36.84@;DATA_SLTHICK:0.8;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:300;DATA_NUMPIXELY:300;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:Fiesta-C;DATA_PATPOS:Supine;DATA_MODE:3D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+          <ses:property name="auto_transfer" value="true"/>
+          <ses:property name="NextAvailableImgNum" value="data.13469111.1508791147248:182"/>
+        </ses:data>
+        <ses:data name="batchModel_1" type="com.ge.med.di.wf.display.WfVavBatchModel" id="data.10098725.1556960943468">
+          <ses:dataelement xsi:type="dis:BatchModel" xmlns:dis="http://wf.di.med.ge.com/2007/display">
+            <dis:batchType>RectPrism</dis:batchType>
+            <dis:pixelWidth>512</dis:pixelWidth>
+            <dis:pixelHeight>512</dis:pixelHeight>
+            <dis:fov>160.0</dis:fov>
+            <dis:spacing>1.0</dis:spacing>
+            <dis:reformatPlane>OB_CORONAL</dis:reformatPlane>
+            <dis:reformatDirection>P_TO_A</dis:reformatDirection>
+            <dis:renderStyle>MAJOR_AXIS_AVERAGE</dis:renderStyle>
+            <dis:thickness>1.0</dis:thickness>
+            <dis:seriesDescription>COR FIESTA 1x1</dis:seriesDescription>
+          </ses:dataelement>
+        </ses:data>
+        <ses:data name="MR_DATA:PP:MPR:COR" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.14859011.1556960943468">
+          <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:87.03/121.86/-61.84%-92.82/114.68/-63.69%-85.73/-64.98/-55.05#85.91/126.24/30.05%-93.94/119.05/28.20%-86.85/-60.60/36.84@;DATA_SLTHICK:0.8;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:300;DATA_NUMPIXELY:300;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:Fiesta-C;DATA_PATPOS:Supine;DATA_MODE:3D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+          <ses:property name="auto_transfer" value="true"/>
+          <ses:property name="NextAvailableImgNum" value="data.11790070.1508791147280:182"/>
+        </ses:data>
+        <import type="gemriwfm.components.data.MRImageImport" query="ancestor::wf:task/wf:data[@name='MR_DATA']"/>
+        <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.30342455.1556960943467">
+          <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.30342455.1556960943467'],"/>
+          <property name="transient" value="true"/>
+          <property name="destinations" value="PACSMAIN"/>
+          <property name="trigger" value="series"/>
+          <property name="archive_type" value="NETWORKS"/>
+        </task>
+        <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.14859011.1556960943468">
+          <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.14859011.1556960943468'],"/>
+          <property name="transient" value="true"/>
+          <property name="destinations" value="PACSMAIN"/>
+          <property name="trigger" value="series"/>
+          <property name="archive_type" value="NETWORKS"/>
+        </task>
+      </ses:task>
+    </ses:task>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.4989020.1556960943469">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.4989020.1556960943469'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="AX T2 FS" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.26192365.1472645808519">
+      <ses:property name="CONTENT_PROPERTY" value="AXT2FS_20190504020909718_5"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.19938326.1556960949719">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:90.12/133.39/31.50%-89.84/133.40/35.14%-89.81/-46.58/37.46#86.78/131.26/-133.46%-93.18/131.27/-129.82%-93.14/-48.72/-127.49@;DATA_SLTHICK:3.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:320;DATA_NUMPIXELY:224;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:FRFSE-XL;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:0.90;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="198000"/>
+    <ses:data name="LinkSource" type="com.ge.med.di.wf.session.WfData" id="data.19177078.1556960949719">
+      <ses:property name="id" value="data.19177078.1556960949719"/>
+    </ses:data>
+    <ses:property name="datalist" value=""/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value=""/>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.19938326.1556960949719">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.19938326.1556960949719'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="COR T1 PRE/POST" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.22452615.1472644363659">
+      <ses:property name="CONTENT_PROPERTY" value="GADCORT1FS_20170731164234378_2"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.18596056.1501544554379">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:CORONAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:-89.02/14.10/83.73%90.92/10.94/80.20%87.43/12.88/-99.75#-87.37/107.08/84.69%92.57/103.92/81.17%89.08/105.86/-98.78@;DATA_SLTHICK:3.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:384;DATA_NUMPIXELY:224;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:FSE-XL;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="88000"/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value="RXRFDRIVEMODE=1;RXNAVRRMEASURE=;ISSPECTRO=0;GESERVICESTATE=0;SCANMODE=1;RXPSEQ=FSE-XL;"/>
+    <data name="LinkSource" type="com.ge.med.di.wf.session.WfData" id="data.7572528.1556960909497">
+      <property name="id" value="data.7572528.1556960909497"/>
+    </data>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.18596056.1501544554379">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.18596056.1501544554379'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+  <task name="AX T1 PRE/POST" type="gemriwfm.components.task.LxScanningTask" xmlns:ses="http://wf.di.med.ge.com/2006/session">
+    <!--View for Panel 2-->
+    <ses:view constraints="bottom_left_vp" name="Panel2View" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxPanel2"/>
+    </ses:view>
+    <!--View for Main Prescription UI-->
+    <ses:view constraints="main_vp" name="scanrx" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="LxShellUI"/>
+    </ses:view>
+    <!--View for Scan Ops UI-->
+    <ses:view constraints="scanops_vp" name="ScanOps" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="LxScanOps"/>
+    </ses:view>
+    <!--View for Autoview-->
+    <ses:view constraints="top_right_vp" name="autoview" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="autoview"/>
+    </ses:view>
+    <!--Coil UI View-->
+    <ses:view constraints="TABbottom_right_vp" name="Coil" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="coilUI"/>
+    </ses:view>
+    <!--View for Protocol Notes-->
+    <ses:view constraints="TABbottom_right_vp" name="Protocol Notes" type="gemriwfm.components.pef.MRPefAppView">
+      <ses:property name="pefapp" value="protNotes"/>
+    </ses:view>
+    <!--View for Gating Waveform UI-->
+    <ses:view constraints="TABbottom_right_vp" name="Waveforms" type="com.ge.med.di.wf.core.ui.WfPefAppView">
+      <ses:property name="pefapp" value="waveforms"/>
+    </ses:view>
+    <ses:data name="LxProtocol" type="com.ge.med.di.wf.protocol.storage.WfReferencedResource" id="data.22452615.1472644363659">
+      <ses:property name="CONTENT_PROPERTY" value="SAGT1_20170602172629386_5"/>
+    </ses:data>
+    <ses:data name="MR_DATA" type="gemriwfm.components.data.MRDicomRepositoryData" id="data.22825587.1496449589387">
+      <ses:property name="IMAGE_ATTRIBUTES" value="DATA_PHASES:false;DATA_STARTLOC3:0.0;DATA_FOV:180;DATA_MPHIMAGES:false;DATA_PLANE:AXIAL;DATA_OTREG:false;DATA_MGROUP:false;CORNER_POINTS:90.12/133.39/31.50%-89.84/133.40/35.14%-89.81/-46.58/37.46#86.78/131.26/-133.46%-93.18/131.27/-129.82%-93.14/-48.72/-127.49@;DATA_SLTHICK:3.0;DATA_BREATHHOLD:None;DATA_CALIB:false;DATA_NUMPIXELX:384;DATA_NUMPIXELY:224;DATA_PURE:false;DATA_ENDLOC1:0.0;DATA_SLPERPLANE3:0;DATA_SLPERPLANE2:0;DATA_SLPERPLANE1:0;DATA_SPACING:0.0;DATA_ENDLOC2:0.0;DATA_ENDLOC3:0.0;DATA_CONTRAST:No;DATA_MECHO:false;DATA_SCIC:false;DATA_COIL:HEAD,;DATA_APP:FSE-XL;DATA_PATPOS:Supine;DATA_MODE:2D;DATA_STARTLOC2:0.0;DATA_STARTLOC1:0.0;DATA_PHFOV:1.00;"/>
+      <ses:property name="auto_transfer" value="true"/>
+    </ses:data>
+    <ses:property name="STATION_NO" value="0"/>
+    <ses:property name="STATION_TYP" value="0"/>
+    <ses:property name="scanTime" value="73000"/>
+    <ses:property name="autoTrackerFile" value=""/>
+    <ses:property name="taskRxParamMapAsString" value="RXRFDRIVEMODE=2;RXNAVRRMEASURE=;ISSPECTRO=0;GESERVICESTATE=0;SCANMODE=0;RXPSEQ=FSE-XL;"/>
+    <data name="LinkSource" type="com.ge.med.di.wf.session.WfData" id="data.20641350.1556960909514">
+      <property name="id" value="data.20641350.1556960909514"/>
+    </data>
+    <task type="com.ge.med.di.wf.service.WfAutoNetworkTask" name="network:data.22825587.1496449589387">
+      <import type="com.ge.med.di.wf.service.WfAutoImport" query="//wf:data[@id='data.22825587.1496449589387'],"/>
+      <property name="transient" value="true"/>
+      <property name="destinations" value="PACSMAIN"/>
+      <property name="trigger" value="series"/>
+      <property name="archive_type" value="NETWORKS"/>
+    </task>
+  </task>
+</session>
